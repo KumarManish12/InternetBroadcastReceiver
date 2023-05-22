@@ -22,7 +22,7 @@ class MyReceiver:BroadcastReceiver() {
         // register activity with the connectivity manager service
         val connectivityManager =
             context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
             val network = connectivityManager.activeNetwork ?: return false
 
@@ -35,12 +35,12 @@ class MyReceiver:BroadcastReceiver() {
                 activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
                 else -> false
             }
-        } else {
-            @Suppress("DEPRECATION")
-            val networkInfo = connectivityManager.activeNetworkInfo ?: return false
-            @Suppress("DEPRECATION")
-            return networkInfo.isConnected
-        }
+//        } else {
+//            @Suppress("DEPRECATION")
+//            val networkInfo = connectivityManager.activeNetworkInfo ?: return false
+//            @Suppress("DEPRECATION")
+//            return networkInfo.isConnected
+//        }
     }
 
     companion object{

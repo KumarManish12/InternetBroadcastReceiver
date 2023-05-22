@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">InternetBroadcastReceiver</string>
+    <string name="nointernet">No Internet Available</string>
 </resources>
